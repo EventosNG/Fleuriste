@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link rel="stylesheet" href="./css/styles.css">
+
 <head>
+    <link rel="stylesheet" href="./css/styles.css">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CAMINIKA - Login</title>
+    <title>Fleuristé - eventos</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,64 +22,504 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
 
 </head>
 
-<body class="bg-gradient-secondary">
+<body id="page-top" class="sidebar-toggled">
 
-    <div class="container">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- //////////////////////////////////////////////// Sidebar /////////////////////////////////////////////// -->
+        <!-- Sidebar -->
+        <!-- //////////////////////////////////////////////// Sidebar /////////////////////////////////////////////// -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-icon">
+                    <img src="./img/square-logo.jpg" class="main-logo">
+                </div>
+            </a>
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <img src="./img/delivery-guy.jpg" alt="" style="display: inline-block; width: 50%;" class="login-image">
-                            <div class="col-lg-6">
-                                <div class="p-5" style="text-align: center;">
-                                    <img src="./img/logo.png" alt="" style="width: 300px; margin: 20px 0px;">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Hola de nuevo!</h1>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active" style="margin-top: 50px;">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Novedades
+            </div>
+                <a class="nav-link fleuriste-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-utensils fleuriste-link"></i>
+                    <span>Cenas navideñas</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Servicios
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link fleuriste-link" href="services.html">
+                    <i class="fas fa-fan fa-chart-area fleuriste-link"></i>
+                    <span>Florería</span></a>
+            </li>
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link fleuriste-link" href="services.html">
+                    <i class="fas fa-glass-cheers fa-chart-area fleuriste-link"></i>
+                    <span>Eventos</span></a>
+            </li>
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link fleuriste-link" href="services.html">
+                    <i class="fas fa-chess-rook fa-chart-area fleuriste-link"></i>
+                    <span>Banquetes</span></a>
+            </li>
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Soporte
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link fleuriste-link" href="services.html">
+                    <i class="fas fa-headset fa-chart-area fleuriste-link"></i>
+                    <span>Ayuda</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+        </ul>
+        <!-- //////////////////////////////////////////////// Sidebar /////////////////////////////////////////////// -->
+        <!-- End of Sidebar -->
+        <!-- //////////////////////////////////////////////// Sidebar /////////////////////////////////////////////// -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" class="background fleuriste-gradient">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow bg-gradient-primary">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <img src="./img/logo-text.png" alt="caminika" class="caminika-text" style="margin: 0 auto;">
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Invitad@</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <!--div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="dashboard.html" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div-->
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4" style="text-align: center;">
+                        <i class="fas fa-gift fa-2x fleuriste-link" style="margin-bottom: 30px;"></i>
+                        <h1 class="h3 mb-0" style="color: #DC3E7C !important;">Regálale a tu familia una cena inolvidable</h1>
+                        <h6 class="h6 mb-0" style="color: #DC3E7C !important; margin-top: 15px;">No te preocupes, nosotros nos encargamos de todo 😉</h6>
+                        <a class="btn btn-primary" style="margin-top: 20px; color: #FFF !important;" href="photos.html">Quiero ver fotos</a>
+                        <hr>
+                        <h6 class="h6 mb-0" style="color: #DC3E7C !important; margin-top: 30px;">¿Te parece si comenzamos? arrastra hacia arriba la pantalla para comenzar 😀</h6>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Número de personas 👨‍👩‍👧‍👦</div>
+                                                <div>
+                                                    <div class="horizontal-align" style="margin-top: 20px;">
+                                                        <a id="minus-button" class="btn btn-success btn-circle btn-sm">
+                                                            <i class="fas fa-minus"></i>
+                                                        </a>
+                                                        <p style="margin-left: 20px; margin-right: 20px;" id="people-number">4</p>
+                                                        <a id="plus-button" class="btn btn-success btn-circle btn-sm">
+                                                            <i class="fas fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-control custom-checkbox small" style="margin-top: 10px;">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                    <label class="custom-control-label" for="customCheck">Mi pedido es para menos de 4 personas</label>
+                                                    <label>(marcar casilla)</label>
+                                                </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user-friends fa-2x text-gray-300"></i>
+                                        </div>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Ingrese su correo electrónico...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Fecha (aproximada) 📆</div>
+                                                <input type="date" id="xmas-dinner-date" name="xmas-dinner-date">
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Contraseña">
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Recuerda mi usuario</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Adicionales 🎈
+                                            </div>
+                                            <div class="no-gutters align-items-center">
+                                                <div class="custom-control custom-checkbox medium" style="margin-top: 10px;">
+                                                    <input type="checkbox" class="custom-control-input" id="decoration">
+                                                    <label class="custom-control-label" for="decoration">Decoración (montaje)</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox meidum" style="margin-top: 10px;">
+                                                    <input type="checkbox" class="custom-control-input" id="shipping">
+                                                    <label class="custom-control-label" for="shipping">Envío (10km radio)</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox meidum" style="margin-top: 10px;">
+                                                    <input type="checkbox" class="custom-control-input" id="flowers">
+                                                    <label class="custom-control-label" for="flowers">Flores</label>
+                                                </div>
+                                                <div class="slidecontainer" style="display: none; margin-top: 20px;">
+                                                    <label>¿Qué presupuesto planeas?</label>
+                                                    <input type="range" min="2.5" max="100" value="2.5" class="slider" id="myRange">
+                                                    <p id="flowers-amount">$ 500 MXN</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <a href="dashboard.html" class="btn btn-primary btn-user btn-block">
-                                            Ingresar
-                                        </a>
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">¿Olvidó su contraseña?</a>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Los platillos 🍽</div>
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Pavo relleno de carne con frutos secos bañado</h6>
+                                                    <img src="./img/xmas-food/1.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 2,000 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="pavo">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Ensalada navideña 6 personas</h6>
+                                                    <img src="./img/xmas-food/2.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 570 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="ensalada-navi">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Filete Wellington 5 personas inc. salsa de cebolla</h6>
+                                                    <img src="./img/xmas-food/4.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 1,240 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="filete">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Carne de cerdo con persillade</h6>
+                                                    <img src="./img/xmas-food/6.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 1,170 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="persillade">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Gratín delfines 6 porciones</h6>
+                                                    <img src="./img/xmas-food/7.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 400 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="delfines">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Lomo de cerdo relleno de frutas 5 porciones</h6>
+                                                    <img src="./img/xmas-food/9.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 750 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="lomo-cerdo">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Pate navideño de champiñones</h6>
+                                                    <img src="./img/xmas-food/10.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 270 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="pate">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Bacalao noruego 1 Kg</h6>
+                                                    <img src="./img/xmas-food/11.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 1,044 MXN kg</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="bacalao">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                                <!-- SERVE CARD BEGINS -->
+                                                <div class="card shadow" style="text-align: center; padding: 5px; margin-top: 20px;">
+                                                    <h6>Pierna de cerdo adobada 2kg</h6>
+                                                    <img src="./img/xmas-food/12.jpeg" alt="" style="width: 90%; margin: 0 auto;">
+                                                    <h6 style="margin: 10px 0">$ 800 MXN pza</h6>
+                                                    <div>
+                                                        <div class="horizontal-align" style="margin-top: 10px;">
+                                                            <a class=" minus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-minus"></i>
+                                                            </a>
+                                                            <p style="margin-left: 20px; margin-right: 20px;" id="pierna-cerdo">0</p>
+                                                            <a class=" plus btn btn-success btn-circle btn-sm">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- SERVE CARD ENDS -->
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-utensils fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Total aproximado</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="total-price"></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-money-bill fa-2x text-gray-300"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <a class="btn btn-success" style="margin: 0 auto; width: 100%; color: #FFF !important;" id="cotizacion">Quiero una cotización de lo anterior por WhatsApp 😎</a>
+                
+                    <!-- Content Row -->
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+
+                        </div>
+                    </div>
+
                 </div>
+                <!-- /.container-fluid -->
 
             </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Fleuristé 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
+        <!-- End of Content Wrapper -->
 
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
@@ -88,6 +531,233 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/plugins/jquery-dateformat.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            plusMinusButtons();
+            setupQtySelectors();
+            showFlowers();
+            setupSlider();
+            updatePrice();
+            sendBill();
+        });
+
+        function setupQtySelectors() {
+            $('.plus').on('click', function(e) {
+                var parent = e.currentTarget.parentElement; 
+                var newTime = parseInt($(parent).find("p:first").text()) + 1;
+                $(parent).find("p:first").text(newTime);
+                updatePrice();
+            });
+            $('.minus').on('click', function(e) {
+                var parent = e.currentTarget.parentElement;
+                var newTime = parseInt($(parent).find("p:first").text()) - 1;
+                if(newTime <= -1)
+                    newTime = 0;
+                $(parent).find("p:first").text(newTime);
+                updatePrice();
+            });
+        }
+
+        function showFlowers() {
+            $('#flowers').click(function() {
+                if ($(this).is(':checked')) {
+                    $('.slidecontainer').show(500);
+                } else {
+                    $('.slidecontainer').hide(500);
+                }
+            });
+        }
+
+        function setupSlider() {
+            var slider = $('#myRange')[0];
+            var output = $('#flowers-amount')[0];
+            slider.oninput = function() {
+                output.innerHTML = "$ " + String(this.value * 200) + " MXN";
+            }
+        }
+
+        function updatePrice() {
+            var pavo = parseInt($('#pavo')[0].innerHTML);
+            var ensaladaNavi = parseInt($('#ensalada-navi')[0].innerHTML);
+            var filete = parseInt($('#filete')[0].innerHTML);
+            var persillade = parseInt($('#persillade')[0].innerHTML);
+            var delfines = parseInt($('#delfines')[0].innerHTML);
+            var lomoCerdo = parseInt($('#lomo-cerdo')[0].innerHTML);
+            var pate = parseInt($('#pate')[0].innerHTML);
+            var bacalao = parseInt($('#bacalao')[0].innerHTML);
+            var piernaCerdo = parseInt($('#pierna-cerdo')[0].innerHTML);
+
+            $('#total-price').html(
+                "$ " +
+                String(
+                    pavo * 2000 +
+                    ensaladaNavi * 570 +
+                    filete * 1240 +
+                    persillade * 1170 +
+                    delfines * 400 +
+                    lomoCerdo * 750 +
+                    pate * 270 +
+                    bacalao * 1044 +
+                    piernaCerdo * 800
+                )
+                + ".00 MXN"
+            );
+            
+        }
+        // Manda request a TS para desacoplar camión
+        function turnOffDock(truck) {
+            var turnOffTruck1 = function() {
+                $.ajax({
+                    url: 'https://api.thingspeak.com/update?api_key=MODKV138K9INLWRW&field1=' + String(truck) + '.1'
+                }).then(function(data) {
+                   console.log(data);
+                   if (data == 0) {
+                       setTimeout(function(){turnOffTruck1();},3000);
+                   } 
+                });
+            }
+            $('#turnoff-1').on('click', function() {
+                turnOffTruck1(1);
+            });
+
+            $('#turnoff-2').on('click', function() {
+                turnOffTruck1(2);
+            });
+        }
+
+        // obtiene los datos de thingspeak
+        function getThingSpeakdata(timeout) {
+            setTimeout(function() {
+                $.ajax({
+                    url: 'https://thingspeak.com/channels/1241568/field/1.json'
+                }).then(function(data) {
+                    checkIfTruckHasDocked(data);
+                });
+                getThingSpeakdata(parseInt($('#update-sec')[0].innerText) * 1000);
+            }, timeout);
+        }
+
+        function plusMinusButtons() {
+            $('#plus-button').on('click', function() {
+                var newTime = parseInt($('#people-number')[0].innerText) + 1;
+                $('#people-number')[0].innerText = String(newTime);
+            });
+            $('#minus-button').on('click', function() {
+                var newTime = parseInt($('#people-number')[0].innerText) - 1;
+                if(newTime <= 4)
+                    newTime = 4;
+                $('#people-number')[0].innerText = String(newTime);
+            });
+        }
+
+        function checkIfTruckHasDocked(data) {
+            var lenght = 0;
+            $.each(data.feeds,function(i){
+                lenght++
+            })
+
+            switch (data.feeds[lenght-1].field1) {
+                case "1.1":
+                    $('#truck1-card').addClass('card-bkg');
+                    $("#truck1-card").css("background-color","#FFF");
+                    $('#truck1-text>p')[0].innerText = "EN RUTA...";
+                    $('#truck1-icon')[0].classList.remove("fa-truck-loading");
+                    $('#truck1-icon')[0].classList.add("fa-truck");
+                break;
+                case "1":
+                    $('#truck1-card').removeClass('card-bkg');
+                    $("#truck1-card").css("background-color","#17A673");
+                    $("#truck1-table>tbody>tr>td").css("color","#FFF");
+                    $(".dynamic-text").css("color","#FFF");
+                    $('#truck1-text>p')[0].innerText = "DESCARGANDO EN LOPEZ COTILLA";
+                    $('#truck1-icon')[0].classList.remove("fa-truck");
+                    $('#truck1-icon')[0].classList.add("fa-truck-loading");
+                break;
+                case "2.1":
+                    $('#truck2-card').addClass('card-bkg');
+                    $("#truck2-card").css("background-color","#FFF");
+                    $('#truck2-text>p')[0].innerText = "EN RUTA...";
+                    $('#truck2-icon')[0].classList.remove("fa-truck-loading");
+                    $('#truck2-icon')[0].classList.add("fa-truck");   
+                break;
+                case "2":
+                    $('#truck2-card').removeClass('card-bkg');
+                    $("#truck2-card").css("background-color","#17A673");
+                    $("#truck2-table>tbody>tr>td").css("color","#FFF");
+                    $(".dynamic-text").css("color","#FFF");
+                    $('#truck2-text>p')[0].innerText = "DESCARGANDO EN LOPEZ COTILLA";
+                    $('#truck2-icon')[0].classList.remove("fa-truck");
+                    $('#truck2-icon')[0].classList.add("fa-truck-loading");
+                break;
+                default:
+                    break;
+            }
+
+            var formatedDate = $.format.date(data.feeds[lenght - 1].created_at, 'dd/MM/yyyy HH:mm:ss');
+            $('#ts-last-update').html("");
+            $('#ts-last-update').html(`${formatedDate}`);
+        }
+
+        function sendBill() {
+            $('#cotizacion').on('click', function(){
+                var pavo = parseInt($('#pavo')[0].innerHTML);
+                var ensaladaNavi = parseInt($('#ensalada-navi')[0].innerHTML);
+                var filete = parseInt($('#filete')[0].innerHTML);
+                var persillade = parseInt($('#persillade')[0].innerHTML);
+                var delfines = parseInt($('#delfines')[0].innerHTML);
+                var lomoCerdo = parseInt($('#lomo-cerdo')[0].innerHTML);
+                var pate = parseInt($('#pate')[0].innerHTML);
+                var bacalao = parseInt($('#bacalao')[0].innerHTML);
+                var piernaCerdo = parseInt($('#pierna-cerdo')[0].innerHTML);
+
+                var checkout = function() {
+                    var request = "";
+                    if (pavo != 0)
+                        request = request + "%0a" + "-%20" + String(pavo) + "%20Pavo(s)%20relleno%20de%20carne%20con%20frutos%20secos%20bañado";
+                    if (ensaladaNavi != 0)
+                        request = request + "%0a" + "-%20" + String(ensaladaNavi) + "%20Ensalada(s)%20navideña%206%20personas";
+                    if (filete != 0)
+                        request = request + "%0a" + "-%20" + String(filete) + "%20Filete(s)%20wellington%205%20personas%20con%20salsa%20de%20cebolla";
+                    if (persillade != 0)
+                        request = request + "%0a" + "-%20" + String(persillade) + "%20Carne(s)%20de%20cerdo%20con%20persillade%203kg";
+                    if (delfines != 0)
+                        request = request + "%0a" + "-%20" + String(delfines) + "%20Gratín(es)%20delfines%20(6)%20porciones";
+                    if (lomoCerdo != 0)
+                        request = request + "%0a" + "-%20" + String(lomoCerdo) + "%20Lomo(s)%20de%20cerdo%20relleno%20de%20frutas%205%20personas";
+                    if (pate != 0)
+                        request = request + "%0a" + "-%20" + String(pate) + "%20Pate(s)%20navideño%20de%20champiñones";
+                    if (bacalao != 0)
+                        request = request + "%0a" + "-%20" + String(bacalao) + "%20Bacalao%20noruego%20x%201kg";
+                    if (piernaCerdo != 0)
+                        request = request + "%0a" + "-%20" + String(piernaCerdo) + "%20Pierna(s)%20de%20cerdo%20adobado%20x%202kg";
+                    return(request)
+                }
+
+                //https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale
+                //https://api.whatsapp.com/send?phone=523335595716&text=Hola%20como%20estas
+                console.log(checkout());
+                var mensaje =   "Hola!%20😄%20me%20gustaría%20obtener%20una%20cotización%20de%20algunos%20artículos%20que%20vi%20en%20la%20página%20Fleuristé%20para%20una%20cena%20navideña" +
+                                "%0a" +
+                                "La%20fecha%20sería%20el%20día" + String($('#xmas-dinner-date').val()) +
+                                "%20para%20" + String($('#people-number')[0].innerHTML) + "%20personas." +
+                                "%0a" +
+                                checkout() +
+                                "%0a" +
+                                "Muchas%20gracias%20de%20antemano.";
+                window.location.href = "https://api.whatsapp.com/send?phone=523335595716&text=" + String(mensaje);
+            });
+        }
+    </script>
 
 </body>
 
