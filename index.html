@@ -37,7 +37,8 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
                 <div class="sidebar-brand-icon">
-                    <img src="./img/square-logo.jpg" class="main-logo">
+                    <img src="./img/logo-text.png" class="main-logo">
+                    <h6 style="font-weight: 100; color: #FC3E7C;">Eventos</h6>
                 </div>
             </a>
 
@@ -65,19 +66,19 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link fleuriste-link" href="services.html">
+                <a class="nav-link fleuriste-link" href="#" onClick="alert('Próximamente 😉')">
                     <i class="fas fa-fan fa-chart-area fleuriste-link"></i>
                     <span>Florería</span></a>
             </li>
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link fleuriste-link" href="services.html">
+                <a class="nav-link fleuriste-link" href="#" onClick="alert('Próximamente 😉')">
                     <i class="fas fa-glass-cheers fa-chart-area fleuriste-link"></i>
                     <span>Eventos</span></a>
             </li>
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link fleuriste-link" href="services.html">
+                <a class="nav-link fleuriste-link" href="#" onClick="alert('Próximamente 😉')">
                     <i class="fas fa-chess-rook fa-chart-area fleuriste-link"></i>
                     <span>Banquetes</span></a>
             </li>
@@ -89,7 +90,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link fleuriste-link" href="services.html">
+                <a class="nav-link fleuriste-link" href="#" onClick="alert('Próximamente 😉')">
                     <i class="fas fa-headset fa-chart-area fleuriste-link"></i>
                     <span>Ayuda</span></a>
             </li>
@@ -121,10 +122,10 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <img src="./img/logo-text.png" alt="caminika" class="caminika-text" style="margin: 0 auto;">
+                    <img src="./img/logo.png" alt="caminika" class="caminika-text" style="margin: 0 auto;">
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" style="margin-left: 0px !important;">
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -743,17 +744,39 @@
                     return(request)
                 }
 
+                var personas = function() {
+                    if($('#customCheck:checked').length>0) {
+                        return("menos%20de%20cuatro%20personas.")
+                    } else {
+                        return($('#people-number')[0].innerHTML + "%20personas.")
+                    }
+                }
+
+                var extras = function() {
+                    var extrasData = '';
+                    if ($('#decoracion:checked').length>0) {
+                        extrasData = extrasData + '-%20Requiero%20%decoracion%0a';
+                    }
+                    if ($('#shipping:checked').length>0) {
+                        extrasData = extrasData + '-%20Requiero%20%envio%0a';
+                    }
+                    if ($('#flowers:checked').length>0) {
+                        extrasData = extrasData + '-%20Requiero%20%flores%0a';
+                    }
+                }
+
                 //https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale
                 //https://api.whatsapp.com/send?phone=523335595716&text=Hola%20como%20estas
                 console.log(checkout());
-                var mensaje =   "Hola!%20😄%20me%20gustaría%20obtener%20una%20cotización%20de%20algunos%20artículos%20que%20vi%20en%20la%20página%20Fleuristé%20para%20una%20cena%20navideña" +
+                var mensaje =   "Hola!%20😄%20me%20gustaría%20obtener%20una%20cotización%20de%20algunos%20artículos%20que%20vi%20en%20la%20página%20Eventos%20NG%20para%20una%20cena%20navideña%20🎄" +
                                 "%0a" +
-                                "La%20fecha%20sería%20el%20día" + String($('#xmas-dinner-date').val()) +
-                                "%20para%20" + String($('#people-number')[0].innerHTML) + "%20personas." +
+                                "La%20fecha%20sería%20el%20día%20📆" + String($('#xmas-dinner-date').val()) +
+                                "%20para%20" + personas() + "%20👨‍👩‍👧‍👦" +
                                 "%0a" +
                                 checkout() +
                                 "%0a" +
-                                "Muchas%20gracias%20de%20antemano.";
+                                extras() +
+                                "Muchas%20gracias%20de%20antemano%20y%20quedo%20en%20espera%20de%20su%20respuesta.%20😃";
                 window.location.href = "https://api.whatsapp.com/send?phone=523335595716&text=" + String(mensaje);
             });
         }
